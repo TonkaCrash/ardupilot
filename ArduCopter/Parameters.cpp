@@ -627,9 +627,9 @@ const AP_Param::Info Copter::var_info[] = {
     GOBJECT(barometer, "BARO", AP_Baro),
 
     // GPS driver
-    // @Group: GPS_
+    // @Group: GPS
     // @Path: ../libraries/AP_GPS/AP_GPS.cpp
-    GOBJECT(gps, "GPS_", AP_GPS),
+    GOBJECT(gps, "GPS", AP_GPS),
 
     // @Group: SCHED_
     // @Path: ../libraries/AP_Scheduler/AP_Scheduler.cpp
@@ -1044,6 +1044,13 @@ const AP_Param::GroupInfo ParametersG2::var_info[] = {
     // @User: Advanced
     AP_GROUPINFO("RTL_OPTIONS", 43, ParametersG2, rtl_options, 0),
 #endif
+
+    // @Param: FLIGHT_OPTIONS
+    // @DisplayName: Flight mode options
+    // @Description: Flight mode specific options
+    // @Bitmask: 0:Disable thrust loss check, 1:Disable yaw imbalance warning
+    // @User: Advanced
+    AP_GROUPINFO("FLIGHT_OPTIONS", 44, ParametersG2, flight_options, 0),
 
     AP_GROUPEND
 };
